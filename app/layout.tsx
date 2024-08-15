@@ -1,5 +1,6 @@
-import "@/devlink/global.css";
-import { DevLinkProvider } from "@/devlink/DevLinkProvider";
+import { inter } from '@/app/ui/fonts';
+
+import './ui/global.css';
 
 export default function RootLayout({
   children,
@@ -8,10 +9,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <DevLinkProvider>
+      <body className={`${inter.className} antialiased`}>
           {children}
-        </DevLinkProvider>
       </body>
     </html>
   );
